@@ -30,8 +30,8 @@ The tool processes documents through several stages:
 
 1. Clone this repository:
 ```bash
-git clone <your-repository-url>
-cd <repository-name>
+git clone https://github.com/AndiRoihan/DocumentEnhancer.git
+cd DocumentEnhancer
 ```
 
 2. Install the required dependencies:
