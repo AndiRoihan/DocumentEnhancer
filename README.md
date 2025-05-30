@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 Run the program:
 ```bash
-python document_enhancer.py
+python enhancer.py
 ```
 
 1. A file dialog will open - select your document image (JPG, JPEG, PNG, or BMP)
