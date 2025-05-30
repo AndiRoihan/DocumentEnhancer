@@ -3,7 +3,7 @@ import numpy as np
 from tkinter import Tk, filedialog
 import warnings
 import matplotlib.pyplot as plt
-from jiwer import wer, cer
+import os
 
 warnings.filterwarnings('ignore')
 
@@ -153,4 +153,12 @@ if __name__ == '__main__':
         enhancer = DocumentEnhancer(path)
         enhancer.process()
         enhancer.show_results()
-        enhancer.save('output/output_final.jpg')
+        base = os.path.basename(path)
+        name, _ = os.path.splitext(base)
+        output_name = f"{name}_output_final.jpg"
+
+        output_dir = os.path.join(os.getcwd(), "output")
+        os.makedirs(output_dir, exist_ok=True)
+
+        output_path = os.path.join(output_dir, output_name)
+        enhancer.save(output_path)
